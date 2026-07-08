@@ -3,25 +3,23 @@ import {
   BookOpen,
   BriefcaseBusiness,
   Church,
-  Compass,
   Globe2,
   GraduationCap,
   HandHeart,
   HeartHandshake,
-  Mail,
-  MapPin,
+  Megaphone,
   Sprout,
   UsersRound
 } from "lucide-react";
 
 export const church = {
   name: "Malaysia Discipleship Centre",
-  purpose: "We purpose to make disciples and disciple makers.",
+  purpose: "Our call is to make disciples and disciple makers.",
   description:
-    "We purpose as a church to worship God and be on mission with Him, in obedience to the Great Commission, in Malaysia and beyond.",
+    "We believe God called us as a body to worship Him and be on mission with Him, in Malaysia and beyond.",
   identity:
-    "MDC is a non-denominational, independent, evangelical, Christ-centred and Word-centred church that seeks to multiply churches.",
-  registration: "Registered under the National Evangelical Christian Fellowship Malaysia.",
+    "An evangelical, non-denominational and independent church that seeks to multiply disciples by the enabling of the Holy Spirit.",
+  registration: "Registered with the National Evangelical Christian Fellowship, Malaysia.",
   address:
     "18, Jalan Teknologi 3/4, PJU 5, Kota Damansara, 47810, Petaling Jaya, Selangor, Malaysia",
   email: "mdc.mys@gmail.com"
@@ -30,9 +28,9 @@ export const church = {
 export const navItems = [
   { label: "About", href: "#about" },
   { label: "Beliefs", href: "#beliefs" },
-  { label: "Ministries", href: "#ministries" },
-  { label: "Visit", href: "#visit" },
-  { label: "Contact", href: "#contact" }
+  { label: "Mission and Strategy", href: "#mission-strategy" },
+  { label: "Discipling Ministry and Missions", href: "#discipling" },
+  { label: "Ministries", href: "#ministries" }
 ];
 
 export const serviceTimes = [
@@ -55,7 +53,7 @@ export const serviceTimes = [
     icon: GraduationCap
   },
   {
-    title: "Chinese Fellowship",
+    title: "Seniors Fellowship",
     time: "Every Saturday, 1:30pm",
     detail: "Online",
     icon: HeartHandshake
@@ -63,29 +61,35 @@ export const serviceTimes = [
 ];
 
 export const faithStatements = [
-  "Both Old and New Testaments constitute the divinely inspired Word of God, inerrant in the originals.",
-  "There is one God existing eternally in three Persons: Father, Son and Holy Spirit.",
-  "The Lord Jesus Christ, the Son of God, became man without ceasing to be God, to reveal God and redeem sinful men.",
-  "The Holy Spirit convicts, regenerates, sanctifies, comforts, seals believers, and empowers them for the work of Christ.",
-  "Humanity is unable to remedy its lost condition apart from God.",
-  "Salvation is God's gift, brought by grace and received through personal faith in the Lord Jesus Christ.",
-  "Believer's baptism by water symbolises union with Christ in His death and resurrection.",
-  "The Lord's Supper commemorates the sacrifice of our Saviour.",
-  "The believer is called to holy conduct before God and man, and to be life-giving light in the world.",
-  "The Lord Jesus Christ will return personally, visibly, bodily, and imminently."
+  "WE BELIEVE that both Old and New Testaments constitute the divinely inspired Word of God, inerrant in the originals.",
+  "WE BELIEVE in one God existing eternally in three Persons, Father, Son and Holy Spirit.",
+  "WE BELIEVE that the Lord Jesus Christ, the Son of God, became man without ceasing to be God, in order that He might reveal God and redeem sinful men.",
+  "WE BELIEVE that the Holy Spirit came forth from the Father and the Son to convict the world of sin, of righteousness and of judgement and to regenerate, sanctify, comfort, and seal those who believe in Jesus Christ, and to empower them to use spiritual gifts for the carrying out of the work of the Lord Jesus Christ.",
+  "WE BELIEVE that man is totally depraved in that of himself he is utterly unable to remedy his lost condition.",
+  "WE BELIEVE that salvation of man's eternal being is the gift of God brought to man by grace and received by personal faith in the Lord Jesus Christ, whose atoning blood was shed on the cross for the forgiveness of sins.",
+  "WE BELIEVE in the baptism by water of believers, symbolising the believer's union in the death and resurrection of Jesus Christ.",
+  "WE BELIEVE in the observance of the Lord's Supper, commemorating the sacrifice of our Saviour for all mankind.",
+  "WE BELIEVE the life of the believer is to be separate from worldliness by consistent conduct before God and man, and is to be in the world as life-giving light.",
+  "WE BELIEVE in the personal, visible, bodily and imminent return of the Lord Jesus Christ, and that His second advent is essential to the fulfilment of God's plan for this age."
 ];
 
 export const ministries = [
   {
+    title: "Worship Service",
+    description:
+      "As a body we acknowledge God's kingship and sovereign rule and glorify Him in worship. The preached Word of God instructs the church in sound doctrine and application, leading to spiritual transformation, gospel proclamation and mission.",
+    icon: Church
+  },
+  {
     title: "Children's Ministry",
     description:
-      "Supporting parents as the primary disciplers of their children and helping children know God personally through the Word of God, character, compassion, and service.",
+      "Supporting parents as the primary disciplers of their children, laying the early foundation of faith through the Word of God and cultivating character and compassion.",
     icon: Baby
   },
   {
     title: "Youth Ministry",
     description:
-      "Helping youths grow spiritually, physically, intellectually, emotionally, and socially, grounded in the Word of God.",
+      "Helping youths grow holistically to become lifelong followers of Christ and future leaders by grounding them in the Word of God.",
     icon: Sprout
   },
   {
@@ -97,51 +101,37 @@ export const ministries = [
   {
     title: "Chinese Seniors Fellowship",
     description:
-      "Encouraging seniors to live purposefully, receive pastoral care, stay connected in community, and continue exercising godly influence.",
+      "Encouraging seniors to live purposefully in discipleship and be connected with community, while receiving pastoral care.",
     icon: HandHeart
   }
 ];
 
-export const missionFocus = [
+export const missionStrategy = [
   {
-    title: "Disciple Making",
-    description:
-      "Helping believers follow Christ, grow in Christlike character, obey His commands, and multiply by discipling others.",
+    title: "Evangelism",
+    description: "To the unsaved in the world.",
+    icon: Megaphone
+  },
+  {
+    title: "Teaching",
+    description: "Every believer to become a Christlike disciple.",
     icon: BookOpen
   },
   {
-    title: "Missions",
+    title: "Training",
+    description: "Equipping every disciple to be a disciple maker.",
+    icon: GraduationCap
+  },
+  {
+    title: "Transmitting",
     description:
-      "Working with churches and organisations to promote the biblical basis and framework of disciple making in Malaysia and beyond.",
+      "Transmitting the vision of the discipling ministry so the disciple maker becomes a servant leader.",
     icon: Globe2
   }
 ];
 
-export const visitSteps = [
-  {
-    title: "Come for worship",
-    description: "Join the English Sunday Worship Service at 8:45am.",
-    icon: Compass
-  },
-  {
-    title: "Find us in Kota Damansara",
-    description: church.address,
-    icon: MapPin
-  },
-  {
-    title: "Send an enquiry",
-    description: "Ask about worship, ministries, disciple making, missions, or visiting with your family.",
-    icon: Mail
-  }
-];
-
-export const enquiryTypes = [
-  "Worship Visit",
-  "Children's Ministry",
-  "Youth Fellowship",
-  "Church School",
-  "Chinese Fellowship",
-  "Disciple Making",
-  "Missions",
-  "General Enquiry"
+export const disciplingMaterials = [
+  "Basics of the Christian Life",
+  "Towards Christian Maturity",
+  "Go Make Disciples the Master's Way"
 ];
