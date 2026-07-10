@@ -125,15 +125,18 @@ export const missionStrategy = [
 
 export const disciplingMaterials = [
   {
+    fileLabel: "File ONE",
     title: "Basics of the Christian Life",
     image: "/discipling-basics.jpeg"
   },
   {
+    fileLabel: "File TWO",
     title: "Towards Christian Maturity",
     image: "/discipling-maturity.jpeg"
   },
   {
-    title: "Go Make Disciples the Master's Way",
+    fileLabel: "File THREE",
+    title: "Go Make Disciples The Master's Way",
     image: "/discipling-masters-way.jpeg"
   }
 ];

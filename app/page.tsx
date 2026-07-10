@@ -239,10 +239,10 @@ export default function Home() {
             />
             <div className="mt-8 overflow-hidden rounded-lg bg-cream p-8 shadow-soft ring-1 ring-navy/8">
               <Image
-                src="/mdc-logo-new.jpeg"
+                src="/mdc-logo-make-disciples.png"
                 alt="MDC logo showing the call to make disciples of all nations"
-                width={1024}
-                height={879}
+                width={445}
+                height={355}
                 className="mx-auto h-64 w-full object-contain sm:h-80"
               />
             </div>
@@ -275,23 +275,34 @@ export default function Home() {
             intro="Founded and obedient to the Great Commission, the church intentionally builds disciples to be transformed by God and become multiplying disciples."
             inverse
           />
-          <div className="grid gap-5 md:grid-cols-3">
-            {disciplingMaterials.map((material) => {
-              return (
-                <article
-                  key={material.title}
-                  className="overflow-hidden rounded-lg border border-white/12 bg-white/8 shadow-soft"
-                >
-                  <Image
-                    src={material.image}
-                    alt={`${material.title} discipling material cover`}
-                    width={490}
-                    height={686}
-                    className="h-auto w-full object-cover"
-                  />
-                </article>
-              );
-            })}
+          <div>
+            <h3 className="mb-5 text-sm font-bold uppercase tracking-[0.2em] text-gold">
+              Discipling Materials
+            </h3>
+            <div className="grid gap-5 md:grid-cols-3">
+              {disciplingMaterials.map((material) => {
+                return (
+                  <article
+                    key={material.title}
+                    className="overflow-hidden rounded-lg border border-white/12 bg-white/8 shadow-soft"
+                  >
+                    <Image
+                      src={material.image}
+                      alt={`${material.title} discipling material cover`}
+                      width={490}
+                      height={686}
+                      className="h-auto w-full object-cover"
+                    />
+                    <div className="p-5">
+                      <p className="text-sm font-bold text-gold">{material.fileLabel}</p>
+                      <h4 className="mt-1 font-heading text-2xl font-bold leading-tight text-white">
+                        {material.title}
+                      </h4>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -302,7 +313,7 @@ export default function Home() {
             title="Ministries"
             intro="From children to seniors, MDC seeks to nurture disciples across every phase of life."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {ministries.map((ministry) => {
               const Icon = ministry.icon;
               return (
@@ -329,10 +340,10 @@ export default function Home() {
           <div>
             <div className="flex items-center gap-3">
               <Image
-                src="/mdc-logo-make-disciples.png"
+                src="/mdc-logo-new.jpeg"
                 alt=""
-                width={445}
-                height={355}
+                width={1024}
+                height={879}
                 className="h-[72px] w-[72px] rounded bg-white object-contain"
               />
               <p className="font-heading text-2xl font-bold">{church.name}</p>
