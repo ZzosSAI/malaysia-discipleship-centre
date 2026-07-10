@@ -69,14 +69,16 @@ export default function Home() {
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#home" className="flex items-center gap-3" aria-label="Malaysia Discipleship Centre home">
             <Image
-              src="/mdc-logo-full.png"
+              src="/mdc-logo-new.jpeg"
               alt="Malaysia Discipleship Centre logo"
-              width={512}
-              height={512}
+              width={1024}
+              height={879}
               className="h-14 w-14 object-contain sm:h-16 sm:w-16"
               priority
             />
-            <span className="font-heading text-xl font-bold leading-none sm:text-2xl">MDC</span>
+            <span className="max-w-[12rem] font-heading text-lg font-bold leading-tight sm:max-w-none sm:text-2xl">
+              Malaysia Discipleship Centre
+            </span>
           </a>
 
           <div className="hidden items-center gap-8 xl:flex">
@@ -121,7 +123,7 @@ export default function Home() {
               Go Make Disciples of All Nations
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/88 sm:text-xl">
-              Malaysia Discipleship Centre (MDC) is a Christ-centred, Word-centred church committed
+              MDC is a Christ-centred, Word-centred church committed
               to making disciples and disciple makers in obedience to the Great Commission.
             </p>
             <p className="mt-5 font-heading text-2xl font-bold text-gold">Matthew 28:19-20</p>
@@ -218,7 +220,10 @@ export default function Home() {
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy font-heading text-lg font-bold text-white">
                   {index + 1}
                 </span>
-                <p className="text-sm leading-7 text-navy/76">{statement}</p>
+                <p className="text-sm leading-7 text-navy/76">
+                  <strong className="font-bold text-navy">WE BELIEVE</strong>{" "}
+                  {statement.replace(/^WE BELIEVE\s*/, "")}
+                </p>
               </li>
             ))}
           </ol>
@@ -234,11 +239,11 @@ export default function Home() {
             />
             <div className="mt-8 overflow-hidden rounded-lg bg-cream p-8 shadow-soft ring-1 ring-navy/8">
               <Image
-                src="/mdc-logo-full.png"
-                alt="MDC logo showing evangelism, teaching, training, and transmitting"
-                width={512}
-                height={512}
-                className="mx-auto h-64 w-64 object-contain sm:h-80 sm:w-80"
+                src="/mdc-logo-new.jpeg"
+                alt="MDC logo showing the call to make disciples of all nations"
+                width={1024}
+                height={879}
+                className="mx-auto h-64 w-full object-contain sm:h-80"
               />
             </div>
           </div>
@@ -271,19 +276,19 @@ export default function Home() {
             inverse
           />
           <div className="grid gap-5 md:grid-cols-3">
-            {disciplingMaterials.map((material, index) => {
+            {disciplingMaterials.map((material) => {
               return (
                 <article
-                  key={material}
-                  className="rounded-lg border border-white/12 bg-white/8 p-7 backdrop-blur"
+                  key={material.title}
+                  className="overflow-hidden rounded-lg border border-white/12 bg-white/8 shadow-soft"
                 >
-                  <IconShell tone="dark">
-                    <span className="font-heading text-xl font-bold">{index + 1}</span>
-                  </IconShell>
-                  <p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-gold">
-                    Discipling Materials
-                  </p>
-                  <h3 className="mt-3 font-heading text-3xl font-bold text-white">{material}</h3>
+                  <Image
+                    src={material.image}
+                    alt={`${material.title} discipling material cover`}
+                    width={490}
+                    height={686}
+                    className="h-auto w-full object-cover"
+                  />
                 </article>
               );
             })}
@@ -324,11 +329,11 @@ export default function Home() {
           <div>
             <div className="flex items-center gap-3">
               <Image
-                src="/mdc-logo-footer.png"
+                src="/mdc-logo-make-disciples.png"
                 alt=""
-                width={512}
-                height={512}
-                className="h-[72px] w-[72px] object-contain"
+                width={445}
+                height={355}
+                className="h-[72px] w-[72px] rounded bg-white object-contain"
               />
               <p className="font-heading text-2xl font-bold">{church.name}</p>
             </div>

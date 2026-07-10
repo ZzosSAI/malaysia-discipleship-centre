@@ -1,7 +1,6 @@
 import {
   Baby,
   BookOpen,
-  BriefcaseBusiness,
   Church,
   Globe2,
   GraduationCap,
@@ -93,12 +92,6 @@ export const ministries = [
     icon: Sprout
   },
   {
-    title: "Young Working Adults",
-    description:
-      "Providing Christ-centred community, discipleship, and support for individuals navigating career, relationships, and life transitions.",
-    icon: BriefcaseBusiness
-  },
-  {
     title: "Chinese Seniors Fellowship",
     description:
       "Encouraging seniors to live purposefully in discipleship and be connected with community, while receiving pastoral care.",
@@ -131,7 +124,16 @@ export const missionStrategy = [
 ];
 
 export const disciplingMaterials = [
-  "Basics of the Christian Life",
-  "Towards Christian Maturity",
-  "Go Make Disciples the Master's Way"
+  {
+    title: "Basics of the Christian Life",
+    image: "/discipling-basics.jpeg"
+  },
+  {
+    title: "Towards Christian Maturity",
+    image: "/discipling-maturity.jpeg"
+  },
+  {
+    title: "Go Make Disciples the Master's Way",
+    image: "/discipling-masters-way.jpeg"
+  }
 ];
