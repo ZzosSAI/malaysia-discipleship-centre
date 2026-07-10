@@ -126,7 +126,9 @@ export default function Home() {
               MDC is a Christ-centred, Word-centred church committed
               to making disciples and disciple makers in obedience to the Great Commission.
             </p>
-            <p className="mt-5 font-heading text-2xl font-bold text-gold">Matthew 28:19-20</p>
+            <p className="mt-6 inline-flex rounded-full border border-gold/70 bg-navy/68 px-5 py-2 font-heading text-2xl font-bold text-white shadow-[0_14px_40px_rgba(11,42,68,0.36)] backdrop-blur-sm">
+              Matthew 28:19-20
+            </p>
           </div>
 
           <div className="ml-auto hidden max-w-sm rounded-[2rem] border border-white/22 bg-white/12 p-6 text-white shadow-soft backdrop-blur-md lg:block">
