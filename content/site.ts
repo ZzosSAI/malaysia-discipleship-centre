@@ -92,7 +92,7 @@ export const ministries = [
     icon: Sprout
   },
   {
-    title: "Chinese Seniors Fellowship",
+    title: "Seniors Fellowship",
     description:
       "Encouraging seniors to live purposefully in discipleship and be connected with community, while receiving pastoral care.",
     icon: HandHeart
