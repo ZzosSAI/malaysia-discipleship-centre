@@ -29,7 +29,8 @@ export const navItems = [
   { label: "Beliefs", href: "#beliefs" },
   { label: "Mission and Strategy", href: "#mission-strategy" },
   { label: "Discipling Ministry and Missions", href: "#discipling" },
-  { label: "Ministries", href: "#ministries" }
+  { label: "Ministries", href: "#ministries" },
+  { label: "Contact", href: "#contact" }
 ];
 
 export const serviceTimes = [

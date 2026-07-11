@@ -1,6 +1,9 @@
 import Image from "next/image";
 import {
+  Mail,
+  MapPin,
   Menu,
+  Send,
   Wheat
 } from "lucide-react";
 import {
@@ -333,6 +336,124 @@ export default function Home() {
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="bg-sky px-5 py-20 sm:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <SectionHeader
+                title="Contact Us"
+                intro="Send us a message and select the area you would like to ask about. The form is routed to the church email."
+              />
+              <div className="mt-8 space-y-5">
+                <div className="flex gap-4 rounded-lg bg-white p-5 shadow-soft ring-1 ring-navy/8">
+                  <IconShell>
+                    <MapPin aria-hidden="true" className="h-6 w-6" />
+                  </IconShell>
+                  <p className="text-sm leading-7 text-navy/74">{church.address}</p>
+                </div>
+                <div className="flex gap-4 rounded-lg bg-white p-5 shadow-soft ring-1 ring-navy/8">
+                  <IconShell>
+                    <Mail aria-hidden="true" className="h-6 w-6" />
+                  </IconShell>
+                  <a
+                    href={`mailto:${church.email}`}
+                    className="text-sm font-bold text-navy transition hover:text-earth focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+                  >
+                    {church.email}
+                  </a>
+                </div>
+              </div>
+              <div className="mt-8 overflow-hidden rounded-lg bg-white shadow-soft ring-1 ring-navy/8">
+                <iframe
+                  title="Malaysia Discipleship Centre location map"
+                  src="https://www.google.com/maps?q=18%2C%20Jalan%20Teknologi%203%2F4%2C%20PJU%205%2C%20Kota%20Damansara%2C%2047810%2C%20Petaling%20Jaya%2C%20Selangor%2C%20Malaysia&output=embed"
+                  className="h-80 w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+
+            <form
+              action={`https://formsubmit.co/${church.email}`}
+              method="POST"
+              className="rounded-lg bg-white p-6 shadow-soft ring-1 ring-navy/8 sm:p-8"
+            >
+              <input type="hidden" name="_subject" value="MDC Website Enquiry" />
+              <input type="hidden" name="_captcha" value="false" />
+              <div className="grid gap-5 sm:grid-cols-2">
+                <label className="block text-sm font-bold text-navy">
+                  Name
+                  <input
+                    required
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    className="mt-2 h-12 w-full rounded-lg border border-navy/16 bg-white px-4 text-base font-normal text-navy outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30"
+                  />
+                </label>
+                <label className="block text-sm font-bold text-navy">
+                  Email
+                  <input
+                    required
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    className="mt-2 h-12 w-full rounded-lg border border-navy/16 bg-white px-4 text-base font-normal text-navy outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30"
+                  />
+                </label>
+                <label className="block text-sm font-bold text-navy">
+                  Phone number optional
+                  <input
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    className="mt-2 h-12 w-full rounded-lg border border-navy/16 bg-white px-4 text-base font-normal text-navy outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30"
+                  />
+                </label>
+                <label className="block text-sm font-bold text-navy">
+                  Enquiry type
+                  <select
+                    required
+                    name="enquiry_type"
+                    className="mt-2 h-12 w-full rounded-lg border border-navy/16 bg-white px-4 text-base font-normal text-navy outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30"
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      Select an enquiry
+                    </option>
+                    <option>Worship Visit</option>
+                    <option>Children's Ministry</option>
+                    <option>Youth Fellowship</option>
+                    <option>Church School</option>
+                    <option>Seniors Fellowship</option>
+                    <option>Disciple Making</option>
+                    <option>Missions</option>
+                    <option>General Enquiry</option>
+                  </select>
+                </label>
+              </div>
+              <label className="mt-5 block text-sm font-bold text-navy">
+                Message
+                <textarea
+                  required
+                  name="message"
+                  rows={6}
+                  className="mt-2 w-full rounded-lg border border-navy/16 bg-white px-4 py-3 text-base font-normal text-navy outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30"
+                />
+              </label>
+              <button
+                type="submit"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-earth focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              >
+                Send Message
+                <Send aria-hidden="true" className="h-4 w-4" />
+              </button>
+            </form>
           </div>
         </div>
       </section>
